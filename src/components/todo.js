@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Todo() {
+function Todo({todo}) {
+    const {id,title,status}=todo;
+    const h1=<h1>{title}</h1>
+    const text=status?<strive>{h1}</strive>:h1
     return (
-        <div data-testid='todo-1'>
-            <h2>Tesing being done</h2>
+        <div data-testid={`todo-${id}`} >
+        {text}
         </div>
     )
 }
